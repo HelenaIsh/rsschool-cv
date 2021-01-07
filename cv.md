@@ -1,6 +1,5 @@
 # Elena Ishmatova
 
----
 ### Contact info:
 * [LinkedIn](https://www.linkedin.com/in/elena-ishmatova-77a713187/)
 * [GitHub](https://github.com/HelenaIsh)
@@ -28,7 +27,7 @@ _Passionate about learning new technologies, motivated, well organized_
 ### English level:
 B2-C1
 
-### Code exapmle:
+### Code example:
 ```javascript
 function shuffle(array) {
         for (let i = array.length - 1; i > 0; i--) {
