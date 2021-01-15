@@ -17,6 +17,9 @@ main{
   max-width: 35%;
   background-color: #ccd0d1;
 }
+.aside h2 {
+  display: none;
+}
 .aside_content {
   width: 70%;
   margin: 50px auto 20px;
@@ -41,6 +44,8 @@ h1 {
   text-transform: uppercase;
   letter-spacing:.1rem;
   color: gainsboro;
+  text-align: center;
+  background-color: #464646;
 }
 h2 {
   font-size: 1em;
@@ -49,9 +54,12 @@ h2 {
   color: #ccd0d1;
   padding-bottom: 50px;
 }
-h3 {
+h3, h4 {
   text-transform: uppercase;
   letter-spacing:.1rem;
+}
+h5 {
+  margin: 0;
 }
 ul {
   list-style-type: none;
