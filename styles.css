@@ -320,3 +320,7 @@ footer {
     flex: 1 0 100%
   }
 }
+#ivideo {
+  width: 80%;
+  height: 315px;
+}
