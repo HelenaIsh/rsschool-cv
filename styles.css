@@ -1,0 +1,326 @@
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 0;
+}
+main{
+  max-width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+}
+nav {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 20px;
+}
+nav li a {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+nav ul li a:hover {
+  color: #555;
+}
+/* stroke */
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+nav.fill ul li a {
+  transition: all 2s;
+}
+
+nav.fill ul li a:after {
+  text-align: left;
+  content: '.';
+  margin: 0;
+  opacity: 0;
+}
+nav.fill ul li a:hover {
+  color: #fff;
+  z-index: 1;
+}
+nav.fill ul li a:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+}
+#menu__toggle, .menu__btn {
+  display: none;
+}
+.aside {
+  max-width: 35%;
+  background-color: #ccd0d1;
+}
+.aside h2 {
+  display: none;
+}
+.aside_content {
+  width: 70%;
+  margin: 50px auto 20px;
+}
+.description{
+  width: 60%;
+  margin: 0 auto;
+}
+header {
+  text-align: center;
+  background-color: #464646;
+  margin-bottom: 50px;
+}
+p {
+  margin-bottom: 50px;
+}
+h1 {
+  font-size: 2.5em;
+  margin: 0;
+  padding-top: 80px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing:.1rem;
+  color: gainsboro;
+  text-align: center;
+  background-color: #464646;
+}
+h2 {
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing:.5rem;
+  color: #ccd0d1;
+  padding-bottom: 50px;
+}
+h3, h4 {
+  text-transform: uppercase;
+  letter-spacing:.1rem;
+}
+h5 {
+  margin: 0;
+}
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 50px;
+}
+li {
+  padding: 10px;
+}
+.photo {
+  display: block;
+  width: 40%;
+  border-radius: 50%;
+  margin: 45px auto;
+}
+.icons {
+  display: inline;
+  margin: 0;
+  width: 20px;
+  position: relative;
+  top: 5px;
+}
+hr {
+  border: 1px solid darkgray;
+  margin: 0;
+}
+.link {
+  position: relative;
+  left: 5px;
+}
+.responsibilities {
+  font-size: .9em;
+  margin: 0 0 5px 10px;
+  list-style: disc inside;
+}
+.work {
+
+}
+.work li {
+  padding: 5px;
+}
+.position {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.company {
+  font-style: italic;
+  font-size: .9em;
+}
+.year {
+  float: right;
+  font-style: italic;
+  font-size: .9em;
+}
+.project-card {
+  display: flex;
+  width: 100%;
+  margin: 20px 0;
+}
+.project-card:hover {
+  box-shadow: 0 0 10px #7FB3B6;
+  background-clip: padding-box;
+}
+.project-img{
+  flex: 0 1 70%;
+  background-size: cover;
+}
+.card__description {
+  flex: 0 1 30%;
+  padding-left: 20px;
+  text-align: center;
+}
+.project-img__crocodile {
+  background-image: url("img/Crocodile.PNG");
+}
+.project-img__memory {
+  background-image: url("img/Memory.PNG");
+  background-position: top;
+}
+.project-card li {
+  text-align: left;
+  list-style: disc inside;
+}
+footer {
+  height: 50px;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  nav li a {
+  font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .aside {
+    width: 100%;
+    max-width: 100%;
+  }
+  .description {
+    width: 100%;
+  }
+  main {
+    width: 100%;
+    padding: 0 10px;
+  }
+  nav {
+    height: 0;
+  }
+  #menu__toggle {
+    opacity: 0;
+  }
+  .menu__btn {
+    display: flex; /* используем flex для центрирования содержимого */
+    align-items: center;  /* центрируем содержимое кнопки */
+    position: fixed;
+    top: 20px;
+    left: 20px;  width: 26px;
+    height: 26px;  cursor: pointer;
+    z-index: 2;
+  }/* добавляем "гамбургер" */
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;  width: 100%;
+    height: 2px;  background-color: #616161;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+  .menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;  width: 300px;
+    height: 100%;  margin: 0;
+    padding: 80px 0;  list-style: none;
+    text-align: center;  background-color: #ECEFF1;
+    box-shadow: 1px 0 6px rgba(0, 0, 0, .2);
+    z-index: 1;
+  }/* элементы меню */
+  .menu__item {
+    display: block;
+    padding: 12px 24px;  color: #333;  font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;  text-decoration: none;
+  }
+  .menu__item:hover {
+    background-color: #CFD8DC;
+  }
+  #menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    left: 0;
+  }
+  .project-card {
+    flex-wrap: wrap;
+  }
+  .project-img {
+    height: 300px;
+  }
+  .project-img, .card__description {
+    flex: 1 0 100%
+  }
+}
+#ivideo {
+  width: 80%;
+  height: 315px;
+}
